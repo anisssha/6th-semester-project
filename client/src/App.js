@@ -5,10 +5,11 @@ import Homepage from './customer/pages/HomePage/Homepage.jsx'
 function App() {
   return (
     <div className="">
+      <div className='border-2 border-red-600 max-h-screen'>
         <Navigation/>
-     <div>
         <Homepage/>
-     </div>
+      </div>
+    
     </div>
   )
 }

@@ -1,16 +1,17 @@
-// customer/components/Homepage.js
 import React from 'react';
-import MainCarosel from '../../components/HomeCarosel/MainCarosel';
+import MainCarousel from '../../components/HomeCarousel/MainCarousel.jsx'; // Ensure this path is correct
+import HomeSectionCarousel from '../../components/HomeSectionCarousel/HomeSectionCarousel.jsx';
 
-function Homepage() {
+const Homepage = () => {
   return (
     <div>
-      <MainCarosel/>
-      <div>
-        Other section
-      </div>
+      <MainCarousel />
+    
+    <div>
+    <HomeSectionCarousel/>
+    </div>
     </div>
   );
-}
+};
 
 export default Homepage;
