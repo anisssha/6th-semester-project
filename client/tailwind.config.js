@@ -1,10 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
-  theme: {
-    extend: {},
+// tailwind.config.js
+export const content = [
+  './src/**/*.{js,jsx,ts,tsx}', // Ensure your file paths are correct
+];
+export const theme = {
+  extend: {
+    colors: {
+      'light-pink': '#FBF5F5',
+    },
   },
-  plugins: [],
-}
+};
+export const plugins = [];
