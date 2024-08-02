@@ -21,16 +21,28 @@ const navigation = {
       id: 'women',
       name: 'Women',
       featured: [
+        // {
+        //   name: 'New Arrivals',
+        //   href: '#',
+        //   imageSrc: 'https://ahsanhussaincouture.com/wp-content/uploads/2022/12/273993757_689233402086093_6824331897497221025_n-600x750.jpg',
+        //   imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+        // },
+        // {
+        //   name: 'Festival Wear',
+        //   href: '#',
+        //   imageSrc: 'https://www.anitadongre.com/on/demandware.static/-/Sites-masterCatalog_AD_India/default/dw9de40be8/images/hires/S24/Womens/S24A32_SAGE_1.jpg',
+        //   imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+        // },
         {
-          name: 'New Arrivals',
+          name: 'Wallets',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+          imageSrc: 'https://m.media-amazon.com/images/I/814PXZ9gvpL.jpg',
+          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
         {
-          name: 'Basic Tees',
+          name: 'Juttis',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
+          imageSrc: 'https://www.jiomart.com/images/product/original/rvullqnpeu/heer-golden-pearl-ethnic-wedding-punjabi-jutti-mojari-for-women-s-jutis-for-women-gold-product-images-rvullqnpeu-0-202305271307.jpg?im=Resize=(500,630)',
           imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
       ],
@@ -39,14 +51,11 @@ const navigation = {
           id: 'clothing',
           name: 'Clothing',
           items: [
-            { name: 'Tops', href: '#' },
             { name: 'Dresses', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Denim', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
+            { name: 'Sari', href: '#' },
+            { name: 'Suit', href: '#' },
+            { name: 'Ready-to-wear Sari', href: '#' },
+            { name: 'Blouse', href: '#' },
             { name: 'Browse All', href: '#' },
           ],
         },
@@ -54,25 +63,22 @@ const navigation = {
           id: 'accessories',
           name: 'Accessories',
           items: [
-            { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
             { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
+            { name: 'jhumkas', href: '#' },
+          
           ],
         },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
-          ],
-        },
+        // {
+        //   id: 'brands',
+        //   name: 'Brands',
+        //   items: [
+        //     { name: 'Full Nelson', href: '#' },
+        //     { name: 'My Way', href: '#' },
+        //     { name: 'Re-Arranged', href: '#' },
+        //     { name: 'Counterfeit', href: '#' },
+        //     { name: 'Significant Other', href: '#' },
+        //   ],
+        // },
       ],
     },
     {
@@ -82,15 +88,14 @@ const navigation = {
         {
           name: 'New Arrivals',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
+          imageSrc: 'https://d2j6dbq0eux0bg.cloudfront.net/images/102474562/4331052377.jpg',
           imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
         },
         {
-          name: 'Artwork Tees',
+          name: 'New Arrivals',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
+          imageSrc: 'https://img.freepik.com/premium-photo/man-happy-well-groomed-formal-suit-isolated-white-background-male-fashion-concept-business-dress-code-means-men-suit-business-dress-code-businessman-gentleman-dressed-professional-suit_474717-23741.jpg',
+          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
         },
       ],
       sections: [
@@ -98,12 +103,10 @@ const navigation = {
           id: 'clothing',
           name: 'Clothing',
           items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
+            { name: 'Daura-Surwal', href: '#' },
+            { name: 'Dhaka Topi', href: '#' },
+            { name: 'Bleazer', href: '#' },
+            { name: 'Kurtha', href: '#' },
             { name: 'Browse All', href: '#' },
           ],
         },
@@ -111,22 +114,8 @@ const navigation = {
           id: 'accessories',
           name: 'Accessories',
           items: [
-            { name: 'Watches', href: '#' },
+            { name: 'Kukhuri', href: '#' },
             { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
-          ],
-        },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
           ],
         },
       ],
@@ -142,18 +131,18 @@ export default function Example() {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-50 relative">
       {/* Mobile menu */}
       <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
         <DialogBackdrop
           transition
-          className="fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
+          className="fixed inset-0 bg-black bg-opacity-25  transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
         />
 
         <div className="fixed inset-0 z-40 flex">
           <DialogPanel
             transition
-            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
+            className="w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
           >
             <div className="flex px-4 pb-2 pt-5">
               <button
@@ -174,7 +163,7 @@ export default function Example() {
                   {navigation.categories.map((category) => (
                     <Tab
                       key={category.name}
-                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium text-gray-900 data-[selected]:border-indigo-600 data-[selected]:text-indigo-600"
+                      className="flex-1 whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-base font-medium  data-[selected]:border-shade-red data-[selected]:text-shade-red"
                     >
                       {category.name}
                     </Tab>
@@ -190,7 +179,7 @@ export default function Example() {
                           <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                             <img alt={item.imageAlt} src={item.imageSrc} className="object-cover object-center" />
                           </div>
-                          <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                          <a href={item.href} className="mt-6 block font-medium text-shade-red">
                             <span aria-hidden="true" className="absolute inset-0 z-10" />
                             {item.name}
                           </a>
@@ -202,7 +191,7 @@ export default function Example() {
                     </div>
                     {category.sections.map((section) => (
                       <div key={section.name}>
-                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
+                        <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-shade-red">
                           {section.name}
                         </p>
                         <ul
@@ -237,12 +226,12 @@ export default function Example() {
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
               <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                <a href="#" className="-m-2 block p-2 font-medium text-shade-red">
                   Sign in
                 </a>
               </div>
               <div className="flow-root">
-                <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
+                <a href="#" className="-m-2 block p-2 font-medium text-shade-red">
                   Create account
                 </a>
               </div>
@@ -264,7 +253,7 @@ export default function Example() {
       </Dialog>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="flex h-10 items-center justify-center bg-yellow px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over Rs.5000
         </p>
 
@@ -285,7 +274,7 @@ export default function Example() {
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
-                  <span className="logo">(logo)</span>
+                  <span className="logo text-shade-red">(logo)</span>
                   {/* <img
                     alt=""
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -296,11 +285,11 @@ export default function Example() {
 
               {/* Flyout menus */}
               <PopoverGroup className="hidden lg:ml-8 lg:block lg:self-stretch">
-                <div className="flex h-full space-x-8">
+                <div className="flex h-full space-x-8 ">
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
                       <div className="relative flex">
-                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                        <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 data-[open]:text-shade-red">
                           {category.name}
                         </PopoverButton>
                       </div>
@@ -325,7 +314,7 @@ export default function Example() {
                                         className="object-cover object-center"
                                       />
                                     </div>
-                                    <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                                    <a href={item.href} className="mt-6 block font-medium text-shade-red">
                                       <span aria-hidden="true" className="absolute inset-0 z-10" />
                                       {item.name}
                                     </a>
@@ -335,10 +324,10 @@ export default function Example() {
                                   </div>
                                 ))}
                               </div>
-                              <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                              <div className="row-start-1 grid grid-cols-3 justify:'center'gap-x-8 text-sm">
                                 {category.sections.map((section) => (
                                   <div key={section.name}>
-                                    <p id={`${section.name}-heading`} className="font-medium text-gray-900">
+                                    <p id={`${section.name}-heading`} className="font-medium text-shade-red">
                                       {section.name}
                                     </p>
                                     <ul
