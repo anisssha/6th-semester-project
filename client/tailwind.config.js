@@ -6,6 +6,8 @@ export const theme = {
   extend: {
     colors: {
       'light-pink': '#FBF5F5',
+     'shade-red': '#A72F30',
+     'yellow':'#F3BF43',
     },
   },
 };

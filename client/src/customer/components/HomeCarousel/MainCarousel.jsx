@@ -8,7 +8,7 @@ const MainCarousel = () => {
   const items = MainCarouselData.map((item) => (
     <img
       key={item.id} // Make sure each item has a unique key
-      className='cursor-pointer w-screen h-screen object-cover '
+      className='cursor-pointer z-10 w-screen h-screen object-cover '
       role='presentation'
       src={item.image}
       alt={item.alt || 'carousel image'} // Use a descriptive alt text if available
