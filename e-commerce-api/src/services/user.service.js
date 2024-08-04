@@ -30,7 +30,7 @@ const findUserById = async (userId) => {
     }
     
 }
-const findUserByEmail = async (email) => {
+const getUserByEmail = async (email) => {
     try {
         const user = await User.findOne({email});
         if (!user) {
@@ -66,4 +66,4 @@ const getAllUsers = async () => {
         throw new Error(error.message)
     }
 }
-module.exports ={createUser,findUserById,findUserByEmail,getUserprofileByToken}
+module.exports ={createUser,findUserById,getUserByEmail,getUserprofileByToken}
