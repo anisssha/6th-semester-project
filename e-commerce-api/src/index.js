@@ -7,4 +7,8 @@ app.use(cors());
 app.get("/", (req, res) => {
     return res.status(200).send({message:"welcome ",status: true})
 });
+const authRouters = require("./routes/auth.route.js")
+app.use("/auth", authRouters);
+const userRouters = require("./routes/user.route.js")
+app.use("/api/users", userRouters);
 module.exports = app;

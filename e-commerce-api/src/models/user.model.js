@@ -1,52 +1,51 @@
 const mongoose = require('mongoose');
+
 const userSchema = new mongoose.Schema({
     firstName: {
-        typeof: String,
+        type: String,
         required: true,
     },
     lastName: {
-        typeof: String,
+        type: String,
         required: true,
-
     },
     password: {
-        typeof: String,
+        type: String,
         required: true,
-
     },
     email: {
-        typeof: String,
+        type: String,
         required: true,
     },
     role: {
-        typeof: String,
+        type: String,
         required: true,
         default: 'CUSTOMER',
-
-    }, mobile: {
-        typeof:String,
+    },
+    mobile: {
+        type: String,
     },
     address: [{
-        typeof: mongoose.Schema.Types.ObjectId,
-        ref:"addresses"
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "addresses"
     }],
     paymentInformation: [
         {
-            typeof: mongoose.Schema.Types.ObjectId,
-            ref:"payment_information"
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "payment_information"
         }
     ],
     ratings: [{
-        typeof: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "ratings"
     }],
     reviews: [{
-        typeof: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "reviews"
     }],
     createAt: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     }
 });
 
