@@ -1,6 +1,7 @@
 const { JsonWebTokenError } = require('jsonwebtoken');
 const User = require('../models/user.model');
 const bcrypt = require('bcrypt');
+const jwtProvider = require("../config/jwProvider.js")
 const createUser = async (userData) => {
     try {
         let { firstName, lastName, email, password } = userData;
@@ -46,7 +47,8 @@ const getUserByEmail = async (email) => {
 const getUserprofileByToken = async (token) => {
     try {
         const userId = jwtProvider.getUserIdFromToken(token);
-        const user = await findUserById(userId);
+        console.log(userId.userId);
+        const user = await findUserById(userId.userId);
         if (!user) {
             throw new Error('User not foundd with id:', userId);
 
