@@ -12,7 +12,7 @@ const createRating = async (req, res) => {
 }
 const getAllRatings = async (req, res) => {
     const productId = req.params.productId;
-    const user = req.user;
+    const user = await req.user;
     try {
         const review = await reviewService.getAllRatings(productId);
         return res.status(201).send(review);

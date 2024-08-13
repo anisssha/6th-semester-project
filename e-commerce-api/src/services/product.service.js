@@ -71,7 +71,7 @@ async function findProductById(id) {
 async function getAllProducts(reqQuery) {
     let { category, color, sizes, minPrice, maxPrice, minDiscount, sort, stock, pageNumber, pageSize } = reqQuery;
     pageSize = pageSize || 10;
-    let query = product.find().populate("category");
+    let query = products.find().populate("category");
     if (category) {
         const existCategory = await Category.findOne({ name: category });
         if (existCategory) {
@@ -111,7 +111,7 @@ async function getAllProducts(reqQuery) {
         const sortDirection = sort === "price_hight" ? -1 : 1;
         query = query.sort({ discountedPrice: sortDirection })
     }
-    const totalProducts = await product.countDocuments(query);
+    const totalProducts = await products.countDocuments(query);
     const skip = (pageNumber - 1) * pageSize;
     query = query.skip(skip).limit(pageSize);
     const products = await query.exec();

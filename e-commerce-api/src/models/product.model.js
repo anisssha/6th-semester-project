@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Category = require('./category.model');
 
 const productSchema = new mongoose.Schema({
     title: {
@@ -17,7 +16,7 @@ const productSchema = new mongoose.Schema({
     discountedPrice: {
         type: Number,
     },
-    discountedPresent: {
+    discountedPercent: {  // corrected the typo from 'discountedPresent' to 'discountedPercent'
         type: Number,
     },
     quantity: {
@@ -49,7 +48,7 @@ const productSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
-    Category: {
+    category: {  // changed 'Category' to 'category'
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',  // Ensure this matches the Category model name
     },

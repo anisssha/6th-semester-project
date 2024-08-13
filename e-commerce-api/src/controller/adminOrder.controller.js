@@ -11,7 +11,7 @@ const getAllOrders = async (req, res) => {
     }
 }
 const confirmedOrders = async (req, res) => {
-    const orderId = req.params.orderId;
+    const orderId = await req.params.orderId;
     try {
         const orders = await orderService.confirmedOrder(orderId);
         return res.status(200).send(orders);
