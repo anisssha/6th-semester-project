@@ -29,11 +29,11 @@ const productSchema = new mongoose.Schema({
     color: {
         type: String,
     },
-    sizes: [{
+    size: [{
         name: { type: String },
         quantity: { type: Number },
     }],
-    imageUrl: {
+    imgUrl: {
         type: String,
     },
     ratings: [{

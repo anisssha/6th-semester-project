@@ -1,9 +1,11 @@
 const Address = require("../models/address.model.js");
 const Order = require("../models/order.model.js");
 const OrderItem = require("../models/orderItems.model.js");
+
 const cartService = require("../services/cart.service.js");
 
 async function createOrder(user, shippAddress) {
+  console.log("create order");
   let address;
   if (shippAddress._id) {
     let existAddress = await Address.findById(shippAddress._id);
@@ -16,9 +18,12 @@ async function createOrder(user, shippAddress) {
     user.address.push(address);
     await user.save();
   }
-  const cart = await cartSeOrderItemrvice.findUserCart(user._id);
+  const cart = await cartService.findUserCart(user._id);
   const orderItems = [];
   for (const item of cart.cartItems) {
+    console.log('------------------------------')
+    console.log(item)
+    //fetch cartItems from item
     const orderItem = new OrderItem({
       price: item.price,
       product: item.product,
@@ -27,9 +32,16 @@ async function createOrder(user, shippAddress) {
       userId: item.userId,
       discountedPrice: item.discountedPrice,
     });
-    const createOrderItem = await orderItem.save();
-    orderItems.push(createOrderItem);
+
+    console.log('order item', orderItem);
+    try {
+      const createOrderItem = await orderItem.save();
+      orderItems.push(createOrderItem);
+    } catch (err) {
+      console.log('error saving order item', err);
+    }
   }
+
   const createdOrder = new Order({
     user,
     orderItems,

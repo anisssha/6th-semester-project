@@ -7,7 +7,8 @@ const AddressSchema = new mongoose.Schema({
     lastName: {
         type: String,
         required: true,
-    }, streetAddress: {
+    },
+    streetAddress: {
         type: String,
         required: true,
     },

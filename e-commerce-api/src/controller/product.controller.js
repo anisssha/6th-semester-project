@@ -9,7 +9,7 @@ const createProduct = async (req, res) => {
     }
 }
 const deleteProduct = async (req, res) => {
-    const productId = req.params.id;
+    const productId = await  req.params.id;
     try {
         const product = await productService.deleteProduct(productId);
         return res.status(201).send(product);
@@ -20,7 +20,7 @@ const deleteProduct = async (req, res) => {
 }
 
 const updateProduct = async (req, res) => {
-    const productId = req.params.id;
+    const productId = await req.params.id;
     try {
         const product = await productService.updateProduct(productId, req.body);
         return res.status(201).send(product);
@@ -30,7 +30,7 @@ const updateProduct = async (req, res) => {
 }
 
 const findProductById = async (req, res) => {
-    const productId = req.params.id;
+    const productId = await req.params.id;
     try {
         const product = await productService.findProductById(productId);
         return res.status(201).send(product);
@@ -39,19 +39,19 @@ const findProductById = async (req, res) => {
     }
 }
 const getAllProducts = async (req, res) => {
-    const productId = req.params.id;
+    const productId = await req.params.id;
     try {
-        const products = await productService.getAllProducts(req.query);
+        const products = await productService.getAllProducts(req.query,productId);
         return res.status(201).send(products);
     } catch (error) {
         return res.status(500).send({ error: error.message });
     }
 }
 const createMultipleProduct = async (req, res) => {
-    const productId = req.params.id;
+    const productId = await req.params.id;
     try {
-        const product = await productService.createMultipleProduct(req.body);
-        return res.status(201).send({ message: "products created successfully" });
+        const product = await productService.createMultipleProduct(req.body,productId);
+        return res.status(201).send({ message: "products created successfully" } ,product);
     } catch (error) {
         return res.status(500).send({ error: error.message });
     }

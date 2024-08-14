@@ -6,10 +6,10 @@ async function createCart(user) {
         const cart = new Cart({ user });
         const createdCart = await cart.save();
         return createdCart;
-        
+
     } catch (error) {
         throw new Error(error.message);
-        
+
     }
 }
 async function findUserCart(userId) {
@@ -35,7 +35,6 @@ async function findUserCart(userId) {
             totalDiscountedPrice += cartItem.discountedPrice * cartItem.quantity; // Multiply discounted price by quantity
             totalItem += cartItem.quantity;
         }
-
         // Update cart totals
         cart.cartItems = cartItems;
         cart.totalPrice = totalPrice;
@@ -52,10 +51,11 @@ async function findUserCart(userId) {
 
 async function addCartItem(userId, req) {
     try {
-        const cart = await Cart.findOne({ user: userId });
+        // const cart = await Cart.findOne({ user: userId });
+        const cart = await cartService.findUserCart(user._id);
         const product = await Product.findById(req.productId);
 
-        if (!cart) {
+        if (!cart.cartItems) {
             throw new Error("Cart not found for this user.");
         }
 
@@ -76,8 +76,8 @@ async function addCartItem(userId, req) {
                 quantity: 1,
                 userId,
                 price: product.price,
-                size: req.size,
-                discountedPrice: product.discountedPrice,
+                size: req.size || 'Default Size',
+                discountedPrice: product.discountedPrice || product.price,
             });
 
             const createdCartItem = await cartItem.save();
@@ -93,6 +93,6 @@ async function addCartItem(userId, req) {
     }
 }
 
-module.exports = addCartItem;
 
-module.exports = {createCart,findUserCart,addCartItem};
+
+module.exports = { createCart, findUserCart, addCartItem };
