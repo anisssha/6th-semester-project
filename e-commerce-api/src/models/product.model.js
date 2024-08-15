@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Category = require('./category.model');
+
 const productSchema = new mongoose.Schema({
     title: {
         type: String,
@@ -8,7 +8,6 @@ const productSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true,
-
     },
     price: {
         type: Number,
@@ -16,9 +15,8 @@ const productSchema = new mongoose.Schema({
     },
     discountedPrice: {
         type: Number,
-
     },
-    discountedPresent: {
+    discountedPercent: {  // corrected the typo from 'discountedPresent' to 'discountedPercent'
         type: Number,
     },
     quantity: {
@@ -31,38 +29,34 @@ const productSchema = new mongoose.Schema({
     color: {
         type: String,
     },
-    sizes: [{
+    size: [{
         name: { type: String },
         quantity: { type: Number },
-        
     }],
-    imageUrl: {
+    imgUrl: {
         type: String,
     },
     ratings: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'ratings',
-        
-    },],
+        ref: 'Rating',  // Ensure this matches the Rating model name
+    }],
     reviews: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'reviews',
-    },
-    ],
+        ref: 'Review',  // Ensure this matches the Review model name
+    }],
     numRatings: {
         type: Number,
         default: 0,
     },
-    Category: {
+    category: {  // changed 'Category' to 'category'
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'categories',
+        ref: 'Category',  // Ensure this matches the Category model name
     },
     createdAt: {
         type: Date,
-        default: Date.now(),
+        default: Date.now,
     },
-
-
 });
-const product = mongoose.model('Products', productSchema);
-module.exports = product;
+
+const Product = mongoose.model('Product', productSchema);
+module.exports = Product;

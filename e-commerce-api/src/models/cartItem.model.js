@@ -1,23 +1,21 @@
 const mongoose = require('mongoose');
+
 const cartItemSchema = new mongoose.Schema({
     cart: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'cart',
+        ref: 'Carts',  // Make sure this matches the Cart model name
         required: true,
-
     },
     product: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'products',
+        ref: 'Product',  // Make sure this matches the Product model name
         required: true,
-
     },
     size: {
         type: String,
         required: true,
-        
     },
-quantity: {
+    quantity: {
         type: Number,
         required: true,
         default: 1,
@@ -25,19 +23,17 @@ quantity: {
     price: {
         type: Number,
         required: true,
-       
     },
     discountedPrice: {
         type: Number,
         required: true,
-        
-
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'users',
+        ref: 'Users',  // Make sure this matches the User model name
         required: true,
     },
 });
-const CartItem = mongoose.model('CartItems', cartItemSchema);
+
+const CartItem = mongoose.model('CartItem', cartItemSchema);
 module.exports = CartItem;
