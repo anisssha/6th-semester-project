@@ -14,7 +14,7 @@ const HomeSectionCarousel = ({data,sectionName}) => {
     1024: { items: 5.5 },
   };
 
-const slidePrev=()=>setActiveIndex(activeIndex-1);
+// const slidePrev=()=>setActiveIndex(activeIndex-1);
 const slideNext=()=>setActiveIndex(activeIndex+1);
 
 const syncActiveIndex=({item})=>setActiveIndex(item)
