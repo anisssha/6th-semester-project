@@ -54,7 +54,7 @@ async function findUserCart(userId) {
 async function addCartItem(userId, req) {
     try {
          const cart = await Cart.findOne({ user: userId });
-        const cart = await cartService.findUserCart(user._id);
+       // const cart = await cartService.findUserCart(user._id);
         const product = await Product.findById(req.productId);
 
         if (!cart.cartItems) {
