@@ -1,6 +1,8 @@
 const Cart = require('../models/cart.model.js');
 const CartItem = require('../models/cartItem.model');
 const Product = require('../models/product.model');
+const cartService= require("../services/cartItem.service.js")
+
 async function createCart(user) {
     try {
         const cart = new Cart({ user });
@@ -51,7 +53,7 @@ async function findUserCart(userId) {
 
 async function addCartItem(userId, req) {
     try {
-        // const cart = await Cart.findOne({ user: userId });
+         const cart = await Cart.findOne({ user: userId });
         const cart = await cartService.findUserCart(user._id);
         const product = await Product.findById(req.productId);
 
