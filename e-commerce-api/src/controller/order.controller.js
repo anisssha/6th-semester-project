@@ -1,7 +1,7 @@
 const orderService = require("../services/orderService.js");
 const createOrder = async (req, res) => {
     const user = await req.user;
-    // console.log(user);
+    
     try {
         let createOrder = await orderService.createOrder(user, req.body);
         return res.status(201).send(createOrder);

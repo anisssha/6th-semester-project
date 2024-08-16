@@ -14,7 +14,7 @@ async function createOrder(user, shippAddress) {
     address = new Address(shippAddress);
     address.user = user;
     await address.save();
-    //console.lo("user.addresses", user.addresses);
+   
     user.address.push(address);
     await user.save();
   }
