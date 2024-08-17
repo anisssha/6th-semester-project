@@ -27,7 +27,7 @@ async function findUserCart(userId) {
         // Find all cart items for the cart and populate product details
         let cartItems = await CartItem.find({ cart: cart._id }).populate("product");
 
-        // Calculate totals
+       
         let totalPrice = 0;
         let totalDiscountedPrice = 0;
         let totalItem = 0;

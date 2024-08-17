@@ -34,7 +34,7 @@ async function removeCartItem(userId, cartItemId) {
 }
 async function findCartItemById(cartItemId) {
     const cartItem = await CartItem.findById(cartItemId);
-    // console.log(cartItem);
+
     if (cartItem) {
         return cartItem;
     } else {
